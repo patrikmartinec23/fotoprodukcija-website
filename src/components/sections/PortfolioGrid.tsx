@@ -4,7 +4,7 @@ import React from 'react';
 
 const PortfolioGrid: React.FC = () => {
   return (
-    <section className="relative bg-white py-16 lg:py-24 overflow-hidden">
+    <section className="relative bg-gradient-to-b from-white to-gray-50 py-2 lg:py-4 overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Service Cards - Masonry Grid Layout */}
         <div className="max-w-6xl mx-auto">
@@ -44,8 +44,18 @@ const PortfolioGrid: React.FC = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
                   <div className="absolute inset-0 shadow-inner-strong"></div>
+                  
+                  {/* Category Badge */}
+                  <div className="absolute top-3 left-3">
+                    <span className="bg-white/90 backdrop-blur-sm text-gray-800 px-2 py-1 rounded text-xs font-medium">
+                      Portreti
+                    </span>
+                  </div>
+                  
+                  {/* Project Title */}
                   <div className="absolute bottom-4 left-4 text-white">
-                    <p className="font-semibold text-lg tracking-wide">Portreti</p>
+                    <h4 className="font-semibold text-lg tracking-wide mb-1">Poslovni portret</h4>
+                    <p className="text-sm text-gray-200 opacity-90">Korporativna fotografija za LinkedIn profil</p>
                   </div>
                 </div>
 
@@ -58,8 +68,18 @@ const PortfolioGrid: React.FC = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
                   <div className="absolute inset-0 shadow-inner-strong"></div>
+                  
+                  {/* Category Badge */}
+                  <div className="absolute top-3 left-3">
+                    <span className="bg-white/90 backdrop-blur-sm text-gray-800 px-2 py-1 rounded text-xs font-medium">
+                      Eventi
+                    </span>
+                  </div>
+                  
+                  {/* Project Title */}
                   <div className="absolute bottom-4 left-4 text-white">
-                    <p className="font-semibold text-lg tracking-wide">Eventi</p>
+                    <h4 className="font-semibold text-lg tracking-wide mb-1">Tech Summit 2024</h4>
+                    <p className="text-sm text-gray-200 opacity-90">Konferenca in networking dogodek</p>
                   </div>
                 </div>
               </div>
@@ -75,8 +95,18 @@ const PortfolioGrid: React.FC = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
                   <div className="absolute inset-0 shadow-inner-strong"></div>
+                  
+                  {/* Category Badge */}
+                  <div className="absolute top-3 left-3">
+                    <span className="bg-white/90 backdrop-blur-sm text-gray-800 px-2 py-1 rounded text-xs font-medium">
+                      Studio
+                    </span>
+                  </div>
+                  
+                  {/* Project Title */}
                   <div className="absolute bottom-4 left-4 text-white">
-                    <p className="font-semibold text-lg tracking-wide">Studio</p>
+                    <h4 className="font-semibold text-lg tracking-wide mb-1">Umetnostna inštalacija</h4>
+                    <p className="text-sm text-gray-200 opacity-90">Osebni studio fotoshoot</p>
                   </div>
                 </div>
 
@@ -89,8 +119,18 @@ const PortfolioGrid: React.FC = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
                   <div className="absolute inset-0 shadow-inner-strong"></div>
+                  
+                  {/* Category Badge */}
+                  <div className="absolute top-3 left-3">
+                    <span className="bg-white/90 backdrop-blur-sm text-gray-800 px-2 py-1 rounded text-xs font-medium">
+                      Poroka
+                    </span>
+                  </div>
+                  
+                  {/* Project Title */}
                   <div className="absolute bottom-4 left-4 text-white">
-                    <p className="font-semibold text-lg tracking-wide">Venčanja</p>
+                    <h4 className="font-semibold text-lg tracking-wide mb-1">Poroka Luka in Sara</h4>
+                    <p className="text-sm text-gray-200 opacity-90">Poročna prstana</p>
                   </div>
                 </div>
 
