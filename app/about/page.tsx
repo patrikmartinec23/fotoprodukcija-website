@@ -1,14 +1,10 @@
 import ContactForm from '../../src/components/sections/ContactForm';
-import AboutUs from '../../src/components/sections/AboutUs';
 import Card from '../../src/components/ui/Card';
 import Button from '../../src/components/ui/Button';
 
 export default function About() {
   return (
     <div className="pt-8">
-      {/* About Us Section */}
-      <AboutUs />
-
       {/* Values Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
