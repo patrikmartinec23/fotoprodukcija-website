@@ -128,86 +128,24 @@ const Hero: React.FC = () => {
               {heroImages[currentImageIndex].alt}
             </div>
             
-            {/* Slide indicators */}
-            <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            {/* Slide indicators - vertical */}
+            <div className="absolute -right-8 top-1/2 transform -translate-y-1/2 flex flex-col space-y-2">
               {heroImages.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentImageIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    index === currentImageIndex ? 'bg-black w-4' : 'bg-gray-300'
+                  className={`h-2 w-2 rounded-full transition-all duration-300 ${
+                    index === currentImageIndex ? 'bg-black h-4' : 'bg-gray-300'
                   }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />
               ))}
             </div>
             
-            {/* Minimalist decorative elements - removed the right circle */}
+            {/* Minimalist decorative elements */}
             <div className="absolute -top-6 -left-6 w-16 h-16 border border-gray-200 rounded-full opacity-30"></div>
             <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-black rounded-full opacity-10"></div>
-          </div>
-        </div>
-
-        {/* Service Cards - Horizontal Layout */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mt-24">
-          {/* Studio photo - categories-1 */}
-          <div className="aspect-[3/4] bg-gradient-to-br from-gray-50 to-gray-150 rounded-lg shadow-md overflow-hidden transform hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer">
-            <div className="relative h-full">
-              <img 
-                src="/images/categories/categories-1.jpg" 
-                alt="Studio slike"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0  bg-opacity-0 hover:bg-opacity-10 transition-all duration-300"></div>
-              <div className="absolute bottom-3 left-3">
-                <p className="text-white text-sm font-medium shadow-text">Studio</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Portraits photo - categories-2 */}
-          <div className="aspect-[3/4] bg-gradient-to-br from-gray-50 to-gray-150 rounded-lg shadow-md overflow-hidden transform hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer">
-            <div className="relative h-full">
-              <img 
-                src="/images/categories/categories-2.jpg" 
-                alt="Profesionalni portreti"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0  bg-opacity-0 hover:bg-opacity-10 transition-all duration-300"></div>
-              <div className="absolute bottom-3 left-3">
-                <p className="text-white text-sm font-medium shadow-text">Portreti</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Wedding photo - categories-3 */}
-          <div className="aspect-[3/4] bg-gradient-to-br from-gray-50 to-gray-150 rounded-lg shadow-md overflow-hidden transform hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer">
-            <div className="relative h-full">
-              <img 
-                src="/images/categories/categories-3.jpg" 
-                alt="Porončno fotografiranje"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0  bg-opacity-0 hover:bg-opacity-10 transition-all duration-300"></div>
-              <div className="absolute bottom-3 left-3">
-                <p className="text-white text-sm font-medium shadow-text">Poroke</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Events photo - categories-4 */}
-          <div className="aspect-[3/4] bg-gradient-to-br from-gray-50 to-gray-150 rounded-lg shadow-md overflow-hidden transform hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer">
-            <div className="relative h-full">
-              <img 
-                src="/images/categories/categories-4.jpg" 
-                alt="Korporativno fotografiranje"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0  bg-opacity-0 hover:bg-opacity-10 transition-all duration-300"></div>
-              <div className="absolute bottom-3 left-3">
-                <p className="text-white text-sm font-medium shadow-text">Eventi</p>
-              </div>
-            </div>
+            <div className="absolute top-12 -right-2 w-12 h-12 border-2 border-gray-300 rounded-full opacity-20"></div>
           </div>
         </div>
       </div>
