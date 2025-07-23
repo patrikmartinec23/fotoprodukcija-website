@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Button from '../ui/Button';
+import AnimatedSection from '../ui/AnimatedSection';
 
 const Hero: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -43,23 +44,25 @@ const Hero: React.FC = () => {
         {/* Header Content and Featured Photo */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-34 items-center mb-16">
           {/* Text Content */}
-          <div className="text-center lg:text-left">
-            <div className="space-y-6">
+          <AnimatedSection animation="slideRight" className="text-center lg:text-left">
+            <AnimatedSection animation="fadeIn" delay={200}>
               <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
                 <span className="text-black">
-                  Ujamimo vaše
+                  Ujemimo vaše
                 </span>
                 <span className="block text-gray-700 font-light italic">
                   najlepše trenutke
                 </span>
               </h1>
+            </AnimatedSection>
+            <AnimatedSection animation="slideUp" delay={400}>
               <p className="text-xl text-gray-500 leading-relaxed font-light">
                 Profesionalne fotografske storitve, ki vsebujejo <em>umetnost</em> iz vsakega kota. 
                 Ponudba profesionalnih fotografskih storitev, ki zajemajo vse od <span className="text-black font-medium">portretov</span> do <span className="text-black font-medium">korporativnih dogodkov</span>.
               </p>
-            </div>
+            </AnimatedSection>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-8">
+            <AnimatedSection animation="scale" delay={600} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-8">
               <Link href="/portfolio">
                 <Button 
                   variant="primary" 
@@ -77,12 +80,11 @@ const Hero: React.FC = () => {
               >
                 Sodelujte z nami
               </Button>
-            </div>
-            
-          </div>
+            </AnimatedSection>
+          </AnimatedSection>
 
           {/* Main Featured Photo */}
-          <div className="relative max-w-md mx-auto lg:mx-0">
+          <AnimatedSection animation="slideLeft" delay={300} className="relative max-w-md mx-auto lg:mx-0">
             <div className="aspect-[3/4] bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl shadow-lg overflow-hidden">
               {/* Image slideshow container */}
               <div className="relative h-full">
@@ -108,12 +110,12 @@ const Hero: React.FC = () => {
             </div>
             
             {/* Floating badge */}
-            <div className="absolute -bottom-3 -right-3 bg-black text-white px-3 py-1 rounded-full text-xs font-medium shadow-lg">
+            <AnimatedSection animation="scale" delay={800} className="absolute -bottom-3 -right-3 bg-black text-white px-3 py-1 rounded-full text-xs font-medium shadow-lg">
               {heroImages[currentImageIndex].alt}
-            </div>
+            </AnimatedSection>
             
             {/* Slide indicators - vertical */}
-            <div className="absolute -right-8 top-1/2 transform -translate-y-1/2 flex flex-col space-y-2">
+            <AnimatedSection animation="fadeIn" delay={1000} className="absolute -right-8 top-1/2 transform -translate-y-1/2 flex flex-col space-y-2">
               {heroImages.map((_, index) => (
                 <button
                   key={index}
@@ -124,13 +126,19 @@ const Hero: React.FC = () => {
                   aria-label={`Go to slide ${index + 1}`}
                 />
               ))}
-            </div>
+            </AnimatedSection>
             
             {/* Minimalist decorative elements */}
-            <div className="absolute -top-6 -left-6 w-16 h-16 border border-gray-200 rounded-full opacity-30"></div>
-            <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-black rounded-full opacity-10"></div>
-            <div className="absolute top-12 -right-2 w-12 h-12 border-2 border-gray-300 rounded-full opacity-20"></div>
-          </div>
+            <AnimatedSection animation="fadeIn" delay={1200} className="absolute -top-6 -left-6 w-16 h-16 border border-gray-200 rounded-full opacity-30">
+              <div></div>
+            </AnimatedSection>
+            <AnimatedSection animation="scale" delay={1400} className="absolute -bottom-4 -left-4 w-8 h-8 bg-black rounded-full opacity-10">
+              <div></div>
+            </AnimatedSection>
+            <AnimatedSection animation="fadeIn" delay={1600} className="absolute top-12 -right-2 w-12 h-12 border-2 border-gray-300 rounded-full opacity-20">
+              <div></div>
+            </AnimatedSection>
+          </AnimatedSection>
         </div>
       </div>
     </section>

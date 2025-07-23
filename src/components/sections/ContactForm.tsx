@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Card from '../ui/Card';
 import Input from '../ui/Input';
 import Button from '../ui/Button';
+import AnimatedSection from '../ui/AnimatedSection';
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -33,7 +34,7 @@ const ContactForm: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Info */}
-          <div className="space-y-8">
+          <AnimatedSection animation="slideRight" className="space-y-8">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
                 Rezervirajte termin
@@ -100,11 +101,12 @@ const ContactForm: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </AnimatedSection>
 
           {/* Contact Form */}
-          <Card padding="lg">
-            <form onSubmit={handleSubmit} className="space-y-6">
+          <AnimatedSection animation="slideLeft" delay={200}>
+            <Card padding="lg">
+              <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <Input
                   label="Ime in priimek"
@@ -186,6 +188,7 @@ const ContactForm: React.FC = () => {
               </p>
             </form>
           </Card>
+          </AnimatedSection>
         </div>
       </div>
     </section>
