@@ -294,3 +294,51 @@ body {
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
         0 10px 10px -5px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(0, 0, 0, 0.05);
 }
+
+/* Moving track animations for references */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scroll-down {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes scroll-up {
+    0% {
+        transform: translateY(-50%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.animate-scroll {
+    animation: scroll 30s linear infinite;
+}
+
+.animate-scroll-down {
+    animation: scroll-down 20s linear infinite;
+}
+
+.animate-scroll-up {
+    animation: scroll-up 18s linear infinite;
+}
+
+/* Pause animation on hover */
+.animate-scroll:hover,
+.animate-scroll-reverse:hover,
+.animate-scroll-down:hover,
+.animate-scroll-up:hover {
+    animation-play-state: paused;
+}

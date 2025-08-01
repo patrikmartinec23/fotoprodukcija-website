@@ -41,7 +41,7 @@ const Header: React.FC = () => {
   const navItems = [
     { href: '/', label: 'Domov' },
     { href: '/portfolio', label: 'Projekti' },
-    { href: '/services', label: 'Foto' },
+    { href: '/gallery', label: 'Galerija' },
     { href: '/about', label: 'O nas' },
     { href: '/contact', label: 'Kontakt' },
   ];

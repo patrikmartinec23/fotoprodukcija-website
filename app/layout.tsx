@@ -9,8 +9,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "FotoProdukcija - Profesionalna fotografska usluga",
-  description: "Profesionalna fotografska usluga za vjenčanja, portrete, eventi i korporativne potrebe. Uhvatimo vaše najlepše trenutke.",
+  title: "FotoProdukcija - Profesionalna fotografska storitev",
+  description: "Profesionalne fotografije za poslovne in osebne trenutke. Profesionalni portreti, slikanje dogodkov in ostale fotografske storitve.",
 };
 
 export default function RootLayout({

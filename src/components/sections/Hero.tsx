@@ -33,7 +33,6 @@ const Hero: React.FC = () => {
 
   return (
     <section className="relative bg-white py-16 lg:py-8 overflow-hidden">
-      {/* Minimalist background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gray-100/40 rounded-full blur-3xl"></div>
         <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-gray-50/60 rounded-full blur-3xl"></div>

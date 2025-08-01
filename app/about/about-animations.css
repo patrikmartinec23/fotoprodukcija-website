@@ -1,0 +1,36 @@
+/* Moving track animation for references */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-scroll {
+    animation: scroll 30s linear infinite;
+}
+
+/* Pause animation on hover */
+.animate-scroll:hover {
+    animation-play-state: paused;
+}
+
+/* Team member card hover effects */
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Reference card glass effect */
+.reference-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.reference-card:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
